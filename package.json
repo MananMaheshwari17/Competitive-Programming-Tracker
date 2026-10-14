@@ -9,7 +9,8 @@
     "dev": "concurrently -n api,web -c blue,green \"tsx watch server/index.ts\" \"vite\"",
     "build": "vite build && tsc -p tsconfig.server.json",
     "start": "node dist/server/index.js",
-    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "vercel-build": "npm run build"
   },
   "dependencies": {
     "dotenv": "^16.4.5",
